@@ -13,7 +13,7 @@ using Microsoft.AspNetCore.Routing.Template;
 using Microsoft.Extensions.Localization;
 using Microsoft.Extensions.Options;
 
-namespace My.Extensions.Localization.ReportMissingKeys.Middelwares
+namespace My.Extensions.Localization.ReportMissingKeys.Middlewares
 {
     public class ReportMissingMiddleware
     {

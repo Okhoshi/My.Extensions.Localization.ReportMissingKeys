@@ -5,6 +5,8 @@ using My.Extensions.Localization.ReportMissingKeys.Implementations;
 using My.Extensions.Localization.ReportMissingKeys.Interfaces;
 using My.Extensions.Localization.ReportMissingKeys.Options;
 using Microsoft.Extensions.Localization;
+using Microsoft.AspNetCore.Builder;
+using My.Extensions.Localization.ReportMissingKeys.Middlewares;
 
 namespace Microsoft.Extensions.DependencyInjection
 {
@@ -74,6 +76,11 @@ namespace Microsoft.Extensions.DependencyInjection
             }
 
             return services.AddSingleton<IOutputFormatter, ResxManagerOutputFormatter>();
+        }
+
+        public static IApplicationBuilder UseReportingMissingKeys(this IApplicationBuilder app)
+        {
+            return app.UseMiddleware<ReportMissingMiddleware>();
         }
     }
 }

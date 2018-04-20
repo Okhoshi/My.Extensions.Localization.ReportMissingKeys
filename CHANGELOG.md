@@ -6,5 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [1.0.1] - 2018-04-20
+### Added
+ - Add net451 target
+ - Add Extension method to use the middleware
+
 ## [1.0.0] - 2018-04-19
  - Initial Release :champagne:
